@@ -1,6 +1,7 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import BottomTab from '@src/components/BottomTab';
 import Debug from '@src/screens/Debug';
+import Home from '@src/screens/Home';
 import {useDip} from '@src/utils';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
@@ -15,7 +16,7 @@ interface AppProps {
 const tabs = [
   {
     name: '首页',
-    screen: Debug,
+    screen: Home,
     icon: require('@src/images/menu_global.png'),
   },
   {

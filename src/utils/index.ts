@@ -29,6 +29,9 @@ const isiPhoneXSMax = () => {
   );
 };
 
+const useOSS = (fileName: string) =>
+  `https://net-cctv3.oss-cn-qingdao.aliyuncs.com/net.cctv3.durex/${fileName}`;
+
 /**
  * 状态栏的高度
  * @param isImmersible Android 平台是否沉浸式
@@ -41,6 +44,8 @@ const useStatusBarHeight = (isImmersible: boolean, isSafe?: boolean) => {
     ios: isiPhoneXSMax() ? (isSafe ? 44 : 34) : 20,
   });
 };
+
+const USE_SCREEN_WIDTH = Dimensions.get('screen').width;
 
 /**
  * Home Indicator 的高度
@@ -235,5 +240,7 @@ export {
   useUUID,
   useTimeFormatter,
   useSortedByTime,
-  useMomentChinaConfig
+  useOSS,
+  useMomentChinaConfig,
+  USE_SCREEN_WIDTH
 };
